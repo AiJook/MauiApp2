@@ -3,17 +3,18 @@ using Newtonsoft.Json;
 
 namespace MauiApp2.Pages;
 
-[QueryProperty("StudentData", "StudentData")]
+[QueryProperty(nameof(StudentData), nameof(StudentData))]
 public partial class ProfilePage : ContentPage
 {
-    private Student loggedInUser;
+    private Student _loggedInUser;
 
-    // กำหนด Property เพื่อรับข้อมูล
+    // Property สำหรับรับข้อมูลจาก QueryProperty
     public string StudentData { get; set; }
 
     public ProfilePage()
     {
         InitializeComponent();
+        BindingContext = _loggedInUser;
     }
 
     // เมื่อข้อมูลได้รับการโหลดจาก QueryProperty
@@ -21,19 +22,41 @@ public partial class ProfilePage : ContentPage
     {
         base.OnAppearing();
 
-        // ตรวจสอบและแสดงข้อมูลที่ส่งมา
         if (!string.IsNullOrEmpty(StudentData))
         {
-            loggedInUser = JsonConvert.DeserializeObject<Student>(StudentData);
-            nameLabel.Text = loggedInUser?.Name;
-            emailLabel.Text = loggedInUser?.Email;
+
+
+
+
+            if (_loggedInUser != null)
+            {
+
+                _loggedInUser = JsonConvert.DeserializeObject<Student>(StudentData);
+                emailLabel.Text = _loggedInUser?.Email;
+                nameLabel.Text = _loggedInUser?.Name;
+            }
+            else
+            {
+                System.Diagnostics.Debug.WriteLine("❌ ไม่สามารถ Deserialize StudentData ได้!");
+            }
+        }
+        else
+        {
+            System.Diagnostics.Debug.WriteLine("❌ StudentData เป็นค่าว่างหรือ null!");
         }
     }
+
+
     public async void OnBackButtonClicked(object sender, EventArgs e)
     {
-        // ส่ง UserEmail กลับไปที่หน้า IndexPage เมื่อกดปุ่มย้อนกลับ
-        await Shell.Current.GoToAsync($"IndexPage?UserEmail={Uri.EscapeDataString(loggedInUser.Email)}");
+        // ตรวจสอบว่า _loggedInUser ไม่เป็น null ก่อนส่งข้อมูลกลับ
+        if (_loggedInUser != null)
+        {
+            await Shell.Current.GoToAsync($"IndexPage?UserEmail={Uri.EscapeDataString(_loggedInUser.Email)}");
+        }
+        else
+        {
+            await Shell.Current.GoToAsync("IndexPage");
+        }
     }
-
-
 }

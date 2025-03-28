@@ -1,0 +1,37 @@
+[
+  {
+    "studentId": "S001",
+    "name": "John Doe",
+    "age": 20,
+    "email": "1111",
+    "password" : "1111"
+  },
+  {
+    "studentId": "S002",
+    "name": "Jane Smith",
+    "age": 21,
+    "email": "janesmith@example.com",
+    "password" : "1111"
+  },
+  {
+    "studentId": "S003",
+    "name": "Mike Johnson",
+    "age": 22,
+    "email": "mikejohnson@example.com",
+    "password" : "1111"
+  },
+  {
+    "studentId": "S004",
+    "name": "Alice Brown",
+    "age": 19,
+    "email": "alicebrown@example.com",
+    "password" : "1111"
+  },
+  {
+    "studentId": "S005",
+    "name": "Robert White",
+    "age": 23,
+    "email": "robertwhite@example.com",
+    "password" : "1111"
+  }
+]

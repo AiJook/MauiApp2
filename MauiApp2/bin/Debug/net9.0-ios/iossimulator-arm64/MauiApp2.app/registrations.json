@@ -1,0 +1,31 @@
+[
+  {
+    "studentId": "S001",
+    "registeredCourses": [
+      {
+        "term": "Term 1",
+        "year": 2024,
+        "subjects": [
+          { "subjectId": "MATH101", "subjectName": "Mathematics 101" },
+          { "subjectId": "ENG101", "subjectName": "English 101" }
+        ]
+      },
+      {
+        "term": "Term 2",
+        "year": 2024,
+        "subjects": [
+          { "subjectId": "SCI101", "subjectName": "Science 101" },
+          { "subjectId": "HIST101", "subjectName": "History 101" }
+        ]
+      },
+      {
+        "term": "Term 3",
+        "year": 2024,
+        "subjects": [
+          { "subjectId": "CHEM101", "subjectName": "Chemistry 101" },
+          { "subjectId": "BIO101", "subjectName": "Biology 101" }
+        ]
+      }
+    ]
+  }
+]

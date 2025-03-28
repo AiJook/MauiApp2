@@ -5,12 +5,16 @@
              Title="โปรไฟล์">
 
     <VerticalStackLayout Padding="20">
+
+        <Label x:Name="studentIdLabel" 
+            Text="รหัสนักศึกษา" FontSize="32"  />
         
         <!-- แสดงชื่อ -->
         <Label x:Name="nameLabel" FontSize="24" />
         
         <!-- แสดงอีเมล -->
         <Label x:Name="emailLabel" FontSize="20" />
+        <!-- แสดงชื่อ -->
 
         <Button Text="ย้อนกลับ"
                 Clicked="OnBackButtonClicked" />
