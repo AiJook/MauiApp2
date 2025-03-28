@@ -52,6 +52,10 @@
 		<data>
 		2Ikgd4MekBz4KDFadcRsOaz6Qws=
 		</data>
+		<key>Resources/profile.jpeg</key>
+		<data>
+		zHx7eMUTsM3874I/qmeZgnUfruo=
+		</data>
 		<key>Resources/registrations.json</key>
 		<data>
 		4IzweLswfdXFrMS1gVW4xCvxd3A=
@@ -74,14 +78,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			DRN9tJ5r1FwjTyX6uR46vXpWmLy2deHGdnwMtZSIry4=
+			svMInLlV3Yy05kyhne6v8NLM5M5GS84YgvyjkIg1VX8=
 			</data>
 		</dict>
 		<key>MonoBundle/MauiApp2.pdb</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			BeYpwMcNvy0taGcORBDZupD757a3KXyYvOsdJD2Nz54=
+			Dq0oH/rpxF7nZvvgzZcdInTj0wVHe5JzQRpC/AmQbAM=
 			</data>
 		</dict>
 		<key>MonoBundle/Microsoft.CSharp.dll</key>
@@ -1755,6 +1759,13 @@
 			<key>hash2</key>
 			<data>
 			xjB46IJZchU4aUkPUeVRhWJViqBU1K6H3B/8RQ1fB7M=
+			</data>
+		</dict>
+		<key>Resources/profile.jpeg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			AFpDg84i9JVNUhwVkd8QlCj2cJ6S7AGQ4R8MtQ1Fhgc=
 			</data>
 		</dict>
 		<key>Resources/registrations.json</key>
