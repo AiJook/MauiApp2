@@ -1,0 +1,42 @@
+<Shell
+    x:Class="MauiApp2.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:MauiApp2.Pages"
+    Shell.FlyoutBehavior="Flyout"
+    Title="MauiApp2">
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate pages:LoginPage}" 
+        Route="LoginPage">
+    </ShellContent>
+
+    <ShellContent
+        Title="Index"
+        ContentTemplate="{DataTemplate pages:IndexPage}" 
+        Route="IndexPage">
+        <ShellContent.Content>
+            <NavigationPage>
+                <x:Arguments>
+                    <pages:IndexPage />
+                </x:Arguments>
+            </NavigationPage>
+        </ShellContent.Content>
+    </ShellContent>
+
+    <!-- ส่งข้อมูลไปที่ ProfilePage -->
+    <ShellContent
+        Title="Profile"
+        ContentTemplate="{DataTemplate pages:ProfilePage}" 
+        Route="ProfilePage">
+        <ShellContent.Content>
+            <NavigationPage>
+                <x:Arguments>
+                    <pages:ProfilePage />
+                </x:Arguments>
+            </NavigationPage>
+        </ShellContent.Content>
+    </ShellContent>  
+
+</Shell>

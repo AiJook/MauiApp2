@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:MauiApp2.ViewModel"
+             x:Class="MauiApp2.Pages.IndexPage"
+             Title="หน้าหลัก">
+
+    <ContentPage.BindingContext>
+        <vm:IndexPageViewModel />
+    </ContentPage.BindingContext>
+
+    <VerticalStackLayout>
+        <!-- เนื้อหาหลัก -->
+        <Label Text="ยินดีต้อนรับสู่หน้าหลัก" FontSize="24" HorizontalOptions="Center" Padding="20"/>
+
+        <!-- Navbar ด้วยปุ่ม -->
+        <Grid BackgroundColor="LightGray" Padding="10" ColumnSpacing="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Button Text="ข้อมูลส่วนตัว" Command="{Binding GoToProfileCommand}" Grid.Column="0"/>
+            <Button Text="ลงทะเบียน" Command="{Binding GoToRegisterCommand}" Grid.Column="1"/>
+            <Button Text="รายวิชา" Command="{Binding GoToCoursesCommand}" Grid.Column="2"/>
+        </Grid>
+    </VerticalStackLayout>
+
+</ContentPage>

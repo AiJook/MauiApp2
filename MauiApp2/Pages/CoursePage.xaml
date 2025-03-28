@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.Pages.CoursePage"
+             Title="CoursePage">
+    <VerticalStackLayout>
+        <!-- <Label x:Name="emailLabel"
+               FontSize="20"/> -->
+        <HorizontalStackLayout Padding="10" HorizontalOptions="Center">
+            <Label Text="รายวิชาที่สามารถลงทะเบียนได้"
+               FontSize="30"
+               FontAttributes="Bold"
+               Padding="10"
+            />
+        </HorizontalStackLayout>
+        
+        <CollectionView ItemsSource="{Binding AvailableCourses}" WidthRequest="800">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Padding="10"
+                           Margin="5"
+                           BorderColor="Gray"
+                           CornerRadius="0"
+                           WidthRequest="500"
+                           HasShadow="True">
+                        <!-- เพิ่มมุมให้เหลี่ยม -->
+                        <Grid ColumnDefinitions="*, Auto"
+                                Padding="5">
+                            <!-- ส่วนแสดงชื่อและรหัสวิชาอยู่ฝั่งซ้าย -->
+                            <VerticalStackLayout Grid.Column="0"
+                                    VerticalOptions="Center">
+                                <Label Text="{Binding SubjectName}"
+                                       FontSize="20"
+                                       FontAttributes="Bold"/>
+                                <Label Text="{Binding SubjectId}"
+                                       FontSize="16"
+                                       TextColor="Gray"/>
+                            </VerticalStackLayout>
+
+                            <!-- ส่วนปุ่มอยู่ฝั่งขวา -->
+                            <StackLayout Grid.Column="1"
+                                    Orientation="Horizontal"
+                                    HorizontalOptions="End"
+                                    Spacing="5">
+                                <!-- เพิ่มระยะห่างระหว่างปุ่ม -->
+                                <Button Text="ลงทะเบียน"
+                                        BackgroundColor="LightGreen"
+                                        TextColor="White"
+                                        CornerRadius="5"
+                                        Padding="10"
+                                        Clicked="OnRegisterButtonClicked"/>
+                                <Button Text="ถอนรายวิชา"
+                                        BackgroundColor="LightCoral"
+                                        TextColor="White"
+                                        CornerRadius="5"
+                                        Padding="10"
+                                        Clicked="OnWithdrawButtonClicked"/>
+                            </StackLayout>
+                        </Grid>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <Label Text="{Binding AvailableCourses.Count, StringFormat='มีรายวิชาทั้งหมด {0} รายการ'}"
+               FontSize="18"
+               Padding="10"
+               HorizontalOptions="Center"/>
+
+
+        <Button Text="ย้อนกลับ" WidthRequest="200" HeightRequest="50"
+                Clicked="OnBackButtonClicked"/>
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,12 @@
+[
+  { "subjectId": "MATH101", "subjectName": "Mathematics 101" },
+  { "subjectId": "ENG101", "subjectName": "English 101" },
+  { "subjectId": "SCI101", "subjectName": "Science 101" },
+  { "subjectId": "HIST101", "subjectName": "History 101" },
+  { "subjectId": "COMP101", "subjectName": "Computer Science 101" },
+  { "subjectId": "ART101", "subjectName": "Art 101" },
+  { "subjectId": "BIO101", "subjectName": "Biology 101" },
+  { "subjectId": "CHEM101", "subjectName": "Chemistry 101" },
+  { "subjectId": "PHYS101", "subjectName": "Physics 101" },
+  { "subjectId": "ECON101", "subjectName": "Economics 101" }
+]

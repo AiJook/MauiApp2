@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.Pages.ProfilePage"
+             Title="โปรไฟล์">
+
+    <VerticalStackLayout Padding="20">
+        
+        <!-- แสดงชื่อ -->
+        <Label x:Name="nameLabel" FontSize="24" />
+        
+        <!-- แสดงอีเมล -->
+        <Label x:Name="emailLabel" FontSize="20" />
+
+        <Button Text="ย้อนกลับ"
+                Clicked="OnBackButtonClicked" />
+
+        
+        <!-- เพิ่มข้อมูลอื่นๆ ที่ต้องการแสดง -->
+    </VerticalStackLayout>
+
+</ContentPage>
